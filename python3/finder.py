@@ -42,7 +42,7 @@ class Finder:
         if ext == 'py':
             vim.command(":w")
             vim.command(":vert belowright sb")# 
-            vim.command(":ter python3 "+file)
+            vim.command(":ter python "+file)
         else:
             print('unknown extension:', ext)
             print('nothing will be executed')
