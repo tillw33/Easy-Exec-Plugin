@@ -26,12 +26,8 @@ class Finder:
             if not found:
                 mypath = os.path.dirname(mypath)
             depth += 1
-        if not found:
-            print('Run main file: executing current file')
+        if not found: 
             main_file = vim.eval("@%")
-        else:
-            print('Run main file: executing '+main_file)
-
         if new_window:
             self.run_vert_right(main_file)
         else:
