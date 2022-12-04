@@ -14,6 +14,7 @@ use {"tillw33/Easy-Exec-Plugin"}
 ```
 
 ## Usage
+You can bind this commands to any key you want.
 ```
 :EEextensive
 ```
@@ -24,4 +25,3 @@ use {"tillw33/Easy-Exec-Plugin"}
 ```
 - writes the current file, executes the mainfile in a small terminal at the bottom
 
-You can use a keymap to map these command, i use for example <F5> and <F6>.
