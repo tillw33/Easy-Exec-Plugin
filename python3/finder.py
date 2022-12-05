@@ -44,7 +44,8 @@ class Finder:
     def run_vert_right(self,file):
         vim.command(":w")
         vim.command(":vert belowright sb") 
-        vim.command(":ter python "+file)
+        vim.command(":ter "+file)
+        #vim.command(":ter python "+file)
 
     def run_in_ter(self, file):
         vim.command(":w")
