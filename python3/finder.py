@@ -45,7 +45,7 @@ class Finder:
         vim.command(":w")
         vim.command(":vert belowright sb") 
         vim.command(":ter "+file)
-        vim.command("G<cr>")
+        # vim.command("")
 
     def run_in_ter(self, file):
         vim.command(":w")
