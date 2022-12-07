@@ -35,7 +35,7 @@ class Finder:
                 mypath = os.path.dirname(mypath) # move one dir for next iteration
             depth += 1
         if not found: 
-            main_file = my_file # execute current file for
+            main_file = myfile # execute current file for
         if new_window:
             self.run_vert_right(main_file) # :EEextensive
         else:
