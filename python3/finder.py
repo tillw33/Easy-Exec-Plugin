@@ -37,9 +37,9 @@ class Finder:
             depth += 1
         if not found: 
             if platform.system() == 'Linux':
-                main_file = r"./" + myfile # execute current file for
+                main_file = "./" + myfile # execute current file for
             elif platform.system() == 'Windows':
-                main_file = r".\" + myfile
+                main_file = ".\\" + myfile
             else:
                 print("error, os unknown")
                 exit()
