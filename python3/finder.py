@@ -2,6 +2,7 @@ import vim
 import os
 from os import listdir
 from os.path import isfile, join
+import platform
 
 max_depth = 3
 
@@ -35,7 +36,13 @@ class Finder:
                 mypath = os.path.dirname(mypath) # move one dir for next iteration
             depth += 1
         if not found: 
-            main_file = r"./" + myfile # execute current file for
+            if platform.system() == 'Linux':
+                main_file = r"./" + myfile # execute current file for
+            elif platform.system() == 'Windows':
+                main_file = r".\" + myfile
+            else:
+                print("error, os unknown")
+                exit()
         if new_window:
             self.run_vert_right(main_file) # :EEextensive
         else:
