@@ -17,6 +17,7 @@ class Finder:
         # loop through dirs below, looking for main file
         found = False
         depth = 0
+        main_file=None
         while not found and depth < max_depth:
             onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
             for file in onlyfiles:
@@ -51,9 +52,18 @@ class Finder:
     def run_vert_right(self,file):
         vim.command(":w")
         vim.command(":vert belowright sb") 
-        vim.command(":ter "+file)
-        # vim.command("")
+        list  = file.split(".")
+        if list[-1] == "rs":
+            vim.command(":ter cargo run -q")
+        else:
+            vim.command(":ter "+file)
 
     def run_in_ter(self, file):
+        ft = vim.eval("&filetype")
+        print("filetype is ",ft)
         vim.command(":w")
-        vim.command(":!"+file)
+        list  = file.split(".")
+        if list[-1] == "rs":
+            vim.command(":! cargo run -q")
+        else:
+            vim.command(":! "+file)
