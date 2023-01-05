@@ -67,5 +67,7 @@ class Finder:
         list  = file.split(".")
         if list[-1] == "rs":
             vim.command(":! cargo run -q")
+        elif list[-1] == "tex":
+            vim.command(":VimtexCompile")
         else:
             vim.command(":! "+file)
