@@ -58,7 +58,7 @@ class Finder:
         elif list[-1] == "tex":
             vim.command(":VimtexCompile")
         elif list[-1] == "py":
-            vim.command(":!python "+file)
+            vim.command(":ter !python "+file)
         else:
             vim.command(":ter "+file)
 
